@@ -24,17 +24,22 @@ local function openInTab(promptBuf)
     return true
 end
 
--- Change find_files to function
 local opts = { attach_mappings = openInTab }
 
 -- Search files in the project
-vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
+vim.keymap.set('n', '<leader>pf', function ()
+    builtin.find_files(opts)
+end)
 -- Search files using git
-vim.keymap.set('n', '<leader>pg', builtin.git_files, {})
+vim.keymap.set('n', '<leader>pg', function ()
+    builtin.git_files(opts)
+end)
 
 local function searchStrTelescope(pattern)
 	-- Requires ripgrep to work properly (https://github.com/BurntSushi/ripgrep)
-	builtin.grep_string({ search = pattern })
+	builtin.grep_string({
+        search = pattern,
+    })
 end
 
 -- Grep/Search pattern in all project files
