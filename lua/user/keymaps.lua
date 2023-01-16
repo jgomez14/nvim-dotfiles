@@ -24,7 +24,8 @@ local function openInTab(promptBuf)
     return true
 end
 
-local opts = { attach_mappings = openInTab }
+-- local opts = { attach_mappings = openInTab }
+local opts = {}
 
 -- Search files in the project
 vim.keymap.set('n', '<leader>pf', function ()

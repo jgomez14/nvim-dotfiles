@@ -45,7 +45,7 @@ cmp.setup({
         ['<C-u>'] = cmp.mapping.scroll_docs(-5),
 
         -- toggle completion
-        ['<C-e>'] = cmp.mapping(function(fallback)
+        ['<C-e>'] = cmp.mapping(function()
             if cmp.visible() then
                 cmp.abort()
             else
@@ -73,9 +73,9 @@ cmp.setup({
     }),
 
     sources = {
+        { name = 'nvim_lsp' },
         { name = 'buffer' },
         { name = 'path' },
-        { name = 'nvim_lsp' },
         { name = 'nvim_lua' },
         { name = 'luasnip' }
     }
