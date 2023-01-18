@@ -14,6 +14,10 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
+    -- Harpoon
+    use 'nvim-lua/plenary.nvim'
+    use 'ThePrimeagen/harpoon'
+
 	-- Treesitter
 	use {
 		'nvim-treesitter/nvim-treesitter',

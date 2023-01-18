@@ -50,6 +50,23 @@ end)
 
 -------------------------------------------
 
+-- Harpoon keymaps ------------------------
+
+vim.keymap.set('n', '<leader>h', require("harpoon.ui").toggle_quick_menu, {})
+vim.keymap.set('n', '<leader>ah', require("harpoon.mark").add_file, {})
+vim.keymap.set('n', '<leader>1h', function ()
+	require("harpoon.ui").nav_file(1)
+end)
+vim.keymap.set('n', '<leader>2h', function ()
+	require("harpoon.ui").nav_file(2)
+end)
+vim.keymap.set('n', '<leader>3h', function ()
+	require("harpoon.ui").nav_file(3)
+end)
+vim.keymap.set('n', '<leader>4h', function ()
+	require("harpoon.ui").nav_file(4)
+end)
+
 -- Mason keymaps --------------------------
 
 vim.keymap.set('n', '<leader>m', vim.cmd.Mason)
