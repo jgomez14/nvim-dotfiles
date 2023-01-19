@@ -72,11 +72,3 @@ end)
 vim.keymap.set('n', '<leader>m', vim.cmd.Mason)
 
 -------------------------------------------
-
--- Close automatically brackets, quotes...
-
-vim.keymap.set('i', "'", "''<Left>", { silent = true })
-vim.keymap.set('i', '"', '""<Left>', { silent = true })
-vim.keymap.set('i', '[', '[]<Left>', { silent = true })
-vim.keymap.set('i', '{', '{}<Left>', { silent = true })
-vim.keymap.set('i', '(', '()<Left>', { silent = true })

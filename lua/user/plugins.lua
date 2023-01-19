@@ -7,6 +7,9 @@ return require('packer').startup(function(use)
 	-- Colorscheme onedark
 	use 'navarasu/onedark.nvim'
 
+    -- Autopairs
+    use 'windwp/nvim-autopairs'
+
 	-- Telescope
 	use {
 		'nvim-telescope/telescope.nvim',
