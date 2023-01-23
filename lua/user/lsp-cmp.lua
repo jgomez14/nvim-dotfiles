@@ -84,11 +84,18 @@ cmp.setup({
 -- Define a variable for accesing LSP completion capabilities
 local lspCmpCapabilities = require('cmp_nvim_lsp').default_capabilities()
 
+local function on_attach_mappings()
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = 0 })
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = 0 })
+end
+
 -- Set up automatic setup handling for installed LSP servers
 require('mason-lspconfig').setup_handlers {
 	function(serverName)
 		require('lspconfig')[serverName].setup{
-            capabilities = lspCmpCapabilities
+            capabilities = lspCmpCapabilities,
+
+            on_attach = on_attach_mappings
         }
 	end,
 
@@ -96,6 +103,8 @@ require('mason-lspconfig').setup_handlers {
 	['sumneko_lua'] = function()
 		require('lspconfig')['sumneko_lua'].setup{
             capabilities = lspCmpCapabilities,
+
+            on_attach = on_attach_mappings,
 
 			settings = {
 				Lua = {
