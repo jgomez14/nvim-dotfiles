@@ -5,6 +5,8 @@ vim.opt.relativenumber = true
 -- Set cursor line
 vim.opt.cursorline = true
 
+vim.cmd [[set colorcolumn=120]]
+
 -- Set no permanent search highlighting
 vim.opt.hlsearch = false
 -- Set incremental search
