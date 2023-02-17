@@ -1,6 +1,13 @@
 -- Set leader key to <space> key
 vim.g.mapleader = ' '
 
+-- Set keymaps for better copying and pasting
+vim.keymap.set('x', '<leader>p', '"_dP')
+
+vim.keymap.set('n', '<leader>y', '"+y')
+vim.keymap.set('v', '<leader>y', '"+y')
+vim.keymap.set('n', '<leader>Y', '"+Y')
+
 -- Keymap to open file explorer
 vim.keymap.set('n', '<leader>pv', function ()
     vim.cmd('Lex 12')

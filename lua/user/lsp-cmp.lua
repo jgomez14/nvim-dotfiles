@@ -10,7 +10,7 @@ require('mason-lspconfig').setup({
 		'html',
 		'jsonls',
 		'tsserver',
-		'sumneko_lua',
+		'lua_ls',
 		'pyright',
 		'rust_analyzer'
 	}
@@ -100,8 +100,8 @@ require('mason-lspconfig').setup_handlers {
 	end,
 
     -- Specific config for sumneko_lua lang server
-	['sumneko_lua'] = function()
-		require('lspconfig')['sumneko_lua'].setup{
+	['lua_ls'] = function()
+		require('lspconfig')['lua_ls'].setup{
             capabilities = lspCmpCapabilities,
 
             on_attach = on_attach_mappings,
