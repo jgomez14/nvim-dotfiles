@@ -4,8 +4,10 @@ return require('packer').startup(function(use)
 	-- Manage packer with packer
 	use 'wbthomason/packer.nvim'
 
-	-- Colorscheme onedark
+	-- Colorschemes
 	use 'navarasu/onedark.nvim'
+    use 'lunarvim/darkplus.nvim'
+    use { 'catppuccin/nvim', as = 'catppuccin' }
 
     -- Autopairs
     use 'windwp/nvim-autopairs'

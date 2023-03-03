@@ -1,10 +1,7 @@
--- Create a local variable for manage onedark plugin
-local onedarkTheme = require('onedark')
+local function set_coloscheme(colorscheme)
+	vim.cmd('colorscheme ' .. colorscheme)
+end
 
--- Configure the desired color scheme
-onedarkTheme.setup {
-	style = 'warm'
-}
+local colorscheme = 'onedark'
 
--- Enable colors
-onedarkTheme.load()
+set_coloscheme(colorscheme)
