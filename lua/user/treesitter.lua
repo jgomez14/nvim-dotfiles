@@ -7,7 +7,8 @@ require'nvim-treesitter.configs'.setup {
 		'help',
 		'typescript',
 		'python',
-		'rust' 
+		'rust',
+        'gitignore'
 	},
 
 	-- Install parsers synchronously (only applied to `ensure_installed`)
