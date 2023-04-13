@@ -1,7 +1,15 @@
-local function set_coloscheme(colorscheme)
-	vim.cmd('colorscheme ' .. colorscheme)
-end
+-- local function set_colorscheme(colorscheme)
+-- 	vim.cmd('colorscheme ' .. colorscheme)
+-- end
+--
+-- local colorscheme = 'onedark'
+--
+-- set_colorscheme(colorscheme)
 
-local colorscheme = 'onedark'
+require('onedark').setup {
+    code_style = {
+        comments = 'none'
+    }
+}
 
-set_coloscheme(colorscheme)
+require('onedark').load()
