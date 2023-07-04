@@ -16,22 +16,7 @@ end)
 -- Telescope keymaps ----------------------
 
 local builtin = require('telescope.builtin')
-local actions = require('telescope.actions')
-local actionState = require('telescope.actions.state')
 
-local function openInTab(promptBuf)
-    actions.select_default:replace(function ()
-        actions.close(promptBuf)
-
-        local selection = actionState.get_selected_entry()
-
-        vim.cmd([[tabedit ]]..selection[1])
-    end)
-
-    return true
-end
-
--- local opts = { attach_mappings = openInTab }
 local opts = {}
 
 -- Search files in the project
