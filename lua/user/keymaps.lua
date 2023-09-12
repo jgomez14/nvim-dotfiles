@@ -64,3 +64,10 @@ end)
 vim.keymap.set('n', '<leader>m', vim.cmd.Mason)
 
 -------------------------------------------
+
+-- Trouble keymaps --------------------------
+
+vim.keymap.set('n', '<leader>xx', function() require('trouble').open('document_diagnostics') end)
+vim.keymap.set('n', '<leader>xd', function() require('trouble').open('workspace_diagnostics') end)
+
+-------------------------------------------
