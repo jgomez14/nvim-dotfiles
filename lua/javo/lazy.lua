@@ -24,7 +24,52 @@ require("lazy").setup({
         dependencies = { "nvim-lua/plenary.nvim" }
     },
 
+    -- Treesitter
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        config = function ()
+            local ts_config = require("nvim-treesitter.configs")
+
+            ts_config.setup({
+                ensure_installed = {
+                    "bash",
+                    "css",
+                    "csv",
+                    "dockerfile",
+                    "gitignore",
+                    "html",
+                    "javascript",
+                    "json",
+                    "lua",
+                    "python",
+                    "rust",
+                    "sql",
+                    "typescript",
+                    "vim",
+                    "vimdoc",
+                    "yaml"
+                },
+
+                highlight = { enable = true },
+
+                indent = { enable = true }
+            })
+        end
+    },
+
     -- Autopairs
-    -- "windwp/nvim-autopairs",
-    -- "windwp/nvim-ts-autotag"
+    {
+        "windwp/nvim-autopairs",
+        config = function ()
+            require("nvim-autopairs").setup({ check_ts = true })
+        end
+    },
+
+    {
+        "windwp/nvim-ts-autotag",
+        config = function ()
+            require("nvim-ts-autotag").setup()
+        end
+    },
 })
