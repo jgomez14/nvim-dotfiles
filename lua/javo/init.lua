@@ -1,2 +1,3 @@
-require("lazy")
-require("colors")
+require("javo.lazy")
+require("javo.colors")
+require("javo.keymaps")

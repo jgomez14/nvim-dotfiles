@@ -15,5 +15,16 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- Colorscheme
-    "rebelot/kanagawa.nvim"
+    "rebelot/kanagawa.nvim",
+
+    -- Telescope
+    {
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.3",
+        dependencies = { "nvim-lua/plenary.nvim" }
+    },
+
+    -- Autopairs
+    -- "windwp/nvim-autopairs",
+    -- "windwp/nvim-ts-autotag"
 })
