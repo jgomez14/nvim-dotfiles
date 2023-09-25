@@ -34,3 +34,20 @@ end
 vim.keymap.set("n", "<leader>ps", function()
 	searchStrTelescope(vim.fn.input("Grep > "))
 end)
+
+-- Harpoon keymaps -------------------------
+
+vim.keymap.set("n", "<leader>h", function() require("harpoon.ui").toggle_quick_menu() end)
+vim.keymap.set("n", "<leader>ah", function() require("harpoon.mark").add_file() end)
+vim.keymap.set("n", "<leader>1h", function()
+    require("harpoon.ui").nav_file(1)
+end)
+vim.keymap.set("n", "<leader>2h", function()
+    require("harpoon.ui").nav_file(2)
+end)
+vim.keymap.set("n", "<leader>3h", function()
+    require("harpoon.ui").nav_file(3)
+end)
+vim.keymap.set("n", "<leader>4h", function()
+    require("harpoon.ui").nav_file(4)
+end)
