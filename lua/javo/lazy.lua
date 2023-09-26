@@ -15,9 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- Colorscheme
-    {
-        "EdenEast/nightfox.nvim"
-    },
+    { "EdenEast/nightfox.nvim" },
 
     -- Telescope
     {
@@ -80,4 +78,19 @@ require("lazy").setup({
             require("nvim-ts-autotag").setup()
         end
     },
+
+    -- Lsp
+    { "williamboman/mason.nvim" },
+    { "williamboman/mason-lspconfig.nvim" },
+    { "neovim/nvim-lspconfig" },
+
+    -- Autocompletion
+    { "hrsh7th/nvim-cmp" },
+    { "hrsh7th/cmp-buffer" },
+    { "hrsh7th/cmp-path" },
+    { "hrsh7th/cmp-nvim-lsp" },
+    { "hrsh7th/cmp-nvim-lua" },
+    { "saadparwaiz1/cmp_luasnip" },
+    { "L3MON4D3/LuaSnip" },
+    { "rafamadriz/friendly-snippets" },
 })
