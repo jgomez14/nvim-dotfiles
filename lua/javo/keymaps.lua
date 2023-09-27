@@ -51,3 +51,7 @@ end)
 vim.keymap.set("n", "<leader>4h", function()
     require("harpoon.ui").nav_file(4)
 end)
+
+-- Mason keymaps --------------------------
+
+vim.keymap.set('n', '<leader>m', vim.cmd.Mason)

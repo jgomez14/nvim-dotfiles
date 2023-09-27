@@ -93,4 +93,18 @@ require("lazy").setup({
     { "saadparwaiz1/cmp_luasnip" },
     { "L3MON4D3/LuaSnip" },
     { "rafamadriz/friendly-snippets" },
+
+    -- Comments
+    {
+        "numToStr/Comment.nvim",
+        config = function ()
+            require("Comment").setup()
+        end
+    },
+
+    -- Status line
+    {
+        "nvim-lualine/lualine.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" }
+    },
 })
