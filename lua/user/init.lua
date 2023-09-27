@@ -1,8 +1,0 @@
-require('user.plugins')
-require('user.keymaps')
-require('user.colors')
-require('user.options')
-require('user.treesitter')
-require('user.autopairs')
-require('user.lsp-cmp')
-require('user.lualine')

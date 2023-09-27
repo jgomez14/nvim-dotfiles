@@ -1,30 +1,11 @@
--- Set up mason
-require('mason').setup()
-
--- Set up mason-lspconfig
-require('mason-lspconfig').setup({
-	ensure_installed = {
-		'angularls',
-		'bashls',
-		'cssls',
-		'html',
-		'jsonls',
-		'tsserver',
-		'lua_ls',
-		'pyright',
-		'rust_analyzer'
-	}
-})
-
--- Set autocompletions setup
 local cmp = require('cmp')
 local luasnip = require('luasnip')
 local select_opts = { behavior = 'select' }
 
 cmp.setup({
     snippet = {
-        expand = function(args)
-            require('luasnip').lsp_expand(args.body)
+        expand = function (args)
+            require("luasnip").lsp_expand(args.body)
         end
     },
 
@@ -69,7 +50,7 @@ cmp.setup({
             else
                 fallback()
             end
-        end, {'i', 's'}),
+        end, {'i', 's'})
     }),
 
     sources = {
@@ -80,39 +61,3 @@ cmp.setup({
         { name = 'luasnip' }
     }
 })
-
--- Define a variable for accesing LSP completion capabilities
-local lspCmpCapabilities = require('cmp_nvim_lsp').default_capabilities()
-
-local function on_attach_mappings()
-    vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = 0 })
-    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = 0 })
-end
-
--- Set up automatic setup handling for installed LSP servers
-require('mason-lspconfig').setup_handlers {
-	function(serverName)
-		require('lspconfig')[serverName].setup{
-            capabilities = lspCmpCapabilities,
-
-            on_attach = on_attach_mappings
-        }
-	end,
-
-    -- Specific config for sumneko_lua lang server
-	['lua_ls'] = function()
-		require('lspconfig')['lua_ls'].setup{
-            capabilities = lspCmpCapabilities,
-
-            on_attach = on_attach_mappings,
-
-			settings = {
-				Lua = {
-					diagnostics = {
-						globals = { 'vim' } -- Ignore undefined warning for vim global var
-					}
-				}
-			}
-		}
-	end
-}
