@@ -55,3 +55,15 @@ end)
 -- Mason keymaps --------------------------
 
 vim.keymap.set('n', '<leader>m', vim.cmd.Mason)
+
+-- DAP keymaps ----------------------------
+
+local dap = require("dap")
+local dapui = require("dapui")
+
+vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint)
+vim.keymap.set("n", "<leader>db", dap.continue)
+vim.keymap.set("n", "<leader>so", dap.step_over)
+vim.keymap.set("n", "<leader>si", dap.step_into)
+
+vim.keymap.set("n", "<leader>ds", dapui.toggle)

@@ -107,4 +107,13 @@ require("lazy").setup({
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" }
     },
+
+    -- Debugger
+    {
+        "rcarriga/nvim-dap-ui",
+        dependencies = { "mfussenegger/nvim-dap" },
+        config = function ()
+            require("dapui").setup()
+        end
+    }
 })
