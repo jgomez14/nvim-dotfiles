@@ -28,3 +28,7 @@ vim.opt.softtabstop = 0
 
 -- Disable auto comment. Every time a file is opened formatoptions is set
 vim.cmd [[autocmd FileType * setlocal formatoptions-=ro]]
+
+-- Disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
