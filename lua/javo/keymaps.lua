@@ -67,3 +67,9 @@ vim.keymap.set("n", "<leader>so", dap.step_over)
 vim.keymap.set("n", "<leader>si", dap.step_into)
 
 vim.keymap.set("n", "<leader>ds", dapui.toggle)
+
+-- Nvim tree keymaps ----------------------
+
+local ntree = require("nvim-tree.api")
+
+vim.keymap.set("n", "<leader>t", ntree.tree.toggle)
