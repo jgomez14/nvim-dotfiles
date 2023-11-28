@@ -117,6 +117,27 @@ require("lazy").setup({
         end
     },
 
+    {
+        "mfussenegger/nvim-dap-python",
+        dependencies = { "mfussenegger/nvim-dap" },
+        config = function ()
+            -- Create a virtualenv to install debugpy
+            -- python -m venv ~/.virtualenvs/debugpy
+            -- ~/.virtualenvs/debugpy/bin/python -m pip install debugpy
+
+            local debug_env = os.getenv("HOME") .. "/.virtualenvs/debugpy"
+            local debug_bin = debug_env .. "/bin/python"
+            local code, _, _ = os.execute("ls " .. debug_bin)
+
+            if code ~= 0 then
+                os.execute("python -m venv " .. debug_env)
+                os.execute(debug_bin .. " -m pip install debugpy")
+            end
+
+            require("dap-python").setup(debug_bin)
+        end
+    },
+
     -- Nvim Tree
     {
         "nvim-tree/nvim-tree.lua",
