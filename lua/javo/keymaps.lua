@@ -73,3 +73,21 @@ vim.keymap.set("n", "<leader>ds", dapui.toggle)
 local ntree = require("nvim-tree.api")
 
 vim.keymap.set("n", "<leader>t", ntree.tree.toggle)
+
+-- Trouble keymaps ----------------------
+
+local trouble = require("trouble")
+
+vim.keymap.set("n", "<leader>xx", trouble.toggle)
+vim.keymap.set("n", "<leader>xw", function ()
+    trouble.toggle("workspace_diagnostics")
+end)
+vim.keymap.set("n", "<leader>xd", function ()
+    trouble.toggle("document_diagnostics")
+end)
+
+-- Nvim Dbee keymaps ----------------------
+
+local dbee = require("dbee")
+
+vim.keymap.set("n", "<leader>ddb", dbee.toggle)

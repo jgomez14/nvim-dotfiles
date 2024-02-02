@@ -151,6 +151,15 @@ require("lazy").setup({
         end,
     },
 
+    -- Diagnostics and more
+    {
+        "folke/trouble.nvim",
+        dependencies = {
+            "nvim-tree/nvim-web-devicons"
+        }
+    },
+
+    -- Database client
     {
         "kndndrj/nvim-dbee",
         dependencies = {
@@ -165,5 +174,36 @@ require("lazy").setup({
         config = function()
             require("dbee").setup(--[[optional config]])
         end,
+    },
+
+    -- Obsidian
+    {
+        "epwalsh/obsidian.nvim",
+        version = "*",  -- recommended, use latest release instead of latest commit
+        lazy = true,
+        event = {
+          -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
+          -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/**.md"
+          "BufReadPre " .. vim.fn.expand("~") .. "/documents/obsidian/**.md",
+          "BufNewFile " .. vim.fn.expand("~") .. "/documents/obsidian/**.md",
+        },
+        dependencies = {
+            -- Required.
+            "nvim-lua/plenary.nvim",
+
+            -- see below for full list of optional dependencies 👇
+        },
+        opts = {
+            workspaces = {
+                {
+                    name = "personal",
+                    path = "~/documents/obsidian/personal",
+                },
+            },
+
+            detect_cwd = true
+
+            -- see below for full list of options 👇
+        },
     }
 })
