@@ -52,6 +52,7 @@ require("lazy").setup({
                     "rust",
                     "sql",
                     "typescript",
+                    "tsx",
                     "vim",
                     "vimdoc",
                     "yaml"
