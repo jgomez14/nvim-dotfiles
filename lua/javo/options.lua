@@ -26,6 +26,8 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 8
 vim.opt.softtabstop = 0
 
+vim.cmd [[autocmd FileType typescriptreact setlocal ts=2 sts=2 sw=2]]
+
 -- Disable auto comment. Every time a file is opened formatoptions is set
 vim.cmd [[autocmd FileType * setlocal formatoptions-=ro]]
 
