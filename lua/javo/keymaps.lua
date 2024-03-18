@@ -24,8 +24,8 @@ vim.keymap.set("n", "<leader>pg", function ()
 end)
 
 local function searchStrTelescope(pattern)
-	-- Requires ripgrep to work properly (https://github.com/BurntSushi/ripgrep)
-	telescope.grep_string({
+    -- Requires ripgrep to work properly (https://github.com/BurntSushi/ripgrep)
+    telescope.grep_string({
         search = pattern,
     })
 end

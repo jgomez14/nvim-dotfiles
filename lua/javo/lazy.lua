@@ -14,8 +14,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    -- Colorscheme
+    -- Colorschemes
     { "EdenEast/nightfox.nvim" },
+    { "rebelot/kanagawa.nvim" },
 
     -- Telescope
     {
