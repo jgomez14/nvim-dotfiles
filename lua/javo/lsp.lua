@@ -8,13 +8,15 @@ require("mason-lspconfig").setup({
         "dockerls",
         "docker_compose_language_service",
         "html",
+        "helm_ls",
         "jsonls",
         "tsserver",
         "lua_ls",
         "marksman",
         "pyright",
         "rust_analyzer",
-        "sqlls"
+        "sqlls",
+        "yamlls"
     }
 })
 
@@ -41,6 +43,18 @@ require('mason-lspconfig').setup_handlers({
                 Lua = {
                     diagnostics = {
                         globals = { "vim" }
+                    }
+                }
+            }
+        })
+    end,
+
+    ["helm_ls"] = function ()
+        require("lspconfig")["helm_ls"].setup({
+            settings = {
+                ["helm-ls"] = {
+                    yamlls = {
+                        path = "yaml-language-server"
                     }
                 }
             }

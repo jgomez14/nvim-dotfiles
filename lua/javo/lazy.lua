@@ -178,6 +178,12 @@ require("lazy").setup({
         end,
     },
 
+    -- Helm
+    {
+        "towolf/vim-helm",
+        ft = "helm"
+    },
+
     -- Obsidian
     {
         "epwalsh/obsidian.nvim",
