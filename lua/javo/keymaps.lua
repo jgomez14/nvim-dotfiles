@@ -32,7 +32,7 @@ end
 
 -- Grep/Search pattern in all project files
 vim.keymap.set("n", "<leader>ps", function()
-	searchStrTelescope(vim.fn.input("Grep > "))
+    searchStrTelescope(vim.fn.input("Grep > "))
 end)
 
 -- Harpoon keymaps -------------------------
@@ -91,3 +91,7 @@ end)
 local dbee = require("dbee")
 
 vim.keymap.set("n", "<leader>ddb", dbee.toggle)
+
+-- Oil keymaps ----------------------
+
+vim.keymap.set("n", "<leader>-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })

@@ -213,5 +213,20 @@ require("lazy").setup({
 
             -- see below for full list of options 👇
         },
+    },
+
+    -- oil.nvim - Edit your filesystem like every other text file
+    {
+        'stevearc/oil.nvim',
+        opts = {},
+        -- Optional dependencies
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = function ()
+            require("oil").setup({
+                float = {
+                    padding = 10
+                }
+            })
+        end
     }
 })
