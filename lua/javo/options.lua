@@ -35,3 +35,6 @@ vim.cmd [[autocmd FileType * setlocal formatoptions-=ro]]
 -- Disable netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+-- Set conceal level for obsidian.nvim
+vim.opt.conceallevel = 1

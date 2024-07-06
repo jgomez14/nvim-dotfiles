@@ -94,4 +94,4 @@ vim.keymap.set("n", "<leader>ddb", dbee.toggle)
 
 -- Oil keymaps ----------------------
 
-vim.keymap.set("n", "<leader>-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "<leader>-", "<CMD>Oil<CR>", { desc = "Open parent directory" })

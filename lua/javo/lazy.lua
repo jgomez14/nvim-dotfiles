@@ -207,14 +207,26 @@ require("lazy").setup({
         opts = {
             workspaces = {
                 {
-                    name = "personal",
-                    path = "~/documents/obsidian/personal",
+                    name = "notes",
+                    path = "~/notes",
                 },
             },
 
-            detect_cwd = true
+            -- detect_cwd = true
 
-            -- see below for full list of options 👇
+            completion = {
+                min_chars = 1
+            },
+
+            note_id_func = function (title)
+                local suffix = ""
+
+                if title ~= nil then
+                    suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
+                end
+
+                return tostring(os.date("%Y-%m-%d") .. "_" .. suffix)
+            end
         },
     },
 
