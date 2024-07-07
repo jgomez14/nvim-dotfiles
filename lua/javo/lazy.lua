@@ -214,6 +214,13 @@ require("lazy").setup({
 
             -- detect_cwd = true
 
+            templates = {
+                folder = "5-templates",
+                date_format = "%Y-%m-%d",
+                time_format = "%H:%M:%s",
+                substitutions = {}
+            },
+
             completion = {
                 min_chars = 1
             },
