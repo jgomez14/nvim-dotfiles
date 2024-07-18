@@ -197,6 +197,8 @@ require("lazy").setup({
           -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/**.md"
           "BufReadPre " .. vim.fn.expand("~") .. "/notes/**.md",
           "BufNewFile " .. vim.fn.expand("~") .. "/notes/**.md",
+          "BufReadPre " .. "/mnt/c/Users/javier.gomez/OneDrive - Quenta Solutions/notes/**.md",
+          "BufNewFile " .. "/mnt/c/Users/javier.gomez/OneDrive - Quenta Solutions/notes/**.md",
         },
         dependencies = {
             -- Required.
@@ -210,6 +212,10 @@ require("lazy").setup({
                     name = "notes",
                     path = "~/notes",
                 },
+                {
+                    name = "notes",
+                    path = "/mnt/c/Users/javier.gomez/OneDrive - Quenta Solutions/notes"
+                }
             },
 
             -- detect_cwd = true
