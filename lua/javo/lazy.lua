@@ -228,17 +228,17 @@ require("lazy").setup({
             },
 
             completion = {
-                min_chars = 1
+                min_chars = 2
             },
 
             note_id_func = function (title)
-                local suffix = ""
+                local result_title = ""
 
                 if title ~= nil then
-                    suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
+                    result_title = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
                 end
 
-                return tostring(os.date("%Y-%m-%d") .. "_" .. suffix)
+                return result_title
             end
         },
     },
