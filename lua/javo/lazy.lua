@@ -15,8 +15,13 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- Colorschemes
-    { "EdenEast/nightfox.nvim" },
-    { "rebelot/kanagawa.nvim" },
+    -- { "EdenEast/nightfox.nvim" },
+    -- { "rebelot/kanagawa.nvim" },
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        priority = 1000
+    },
 
     -- Telescope
     {
