@@ -18,10 +18,16 @@ require("lualine").setup {
                 right_padding = 2
             }
         },
-        lualine_b = { 'filename', 'branch' },
+        lualine_b = {
+            {
+                "branch",
+                icon = "󰊢"
+            },
+            "diff"
+        },
         lualine_c = {
-            "diff",
-            "diagnostics"
+            "diagnostics",
+            "filename"
         },
         lualine_x = {},
         lualine_y = { 'filetype', },
