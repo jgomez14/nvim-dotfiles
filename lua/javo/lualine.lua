@@ -30,7 +30,15 @@ require("lualine").setup {
             "filename"
         },
         lualine_x = {},
-        lualine_y = { 'filetype', },
+        lualine_y = {
+            {
+                'filetype',
+                separator = {
+                    right = "█",
+                    left = "█"
+                }
+            }
+        },
         lualine_z = {
             {
                 'location',
