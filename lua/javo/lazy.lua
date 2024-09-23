@@ -205,8 +205,8 @@ require("lazy").setup({
         event = {
           -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
           -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/**.md"
-          "BufReadPre " .. vim.fn.expand("~") .. "/notes/**.md",
-          "BufNewFile " .. vim.fn.expand("~") .. "/notes/**.md",
+          "BufReadPre " .. vim.fn.expand("~") .. "**/notes/**.md",
+          "BufNewFile " .. vim.fn.expand("~") .. "**/notes/**.md",
           "BufReadPre " .. "/mnt/c/Users/javier.gomez/OneDrive - Quenta Solutions/notes/**.md",
           "BufNewFile " .. "/mnt/c/Users/javier.gomez/OneDrive - Quenta Solutions/notes/**.md",
         },
