@@ -54,6 +54,8 @@ require("lazy").setup({
                     "javascript",
                     "json",
                     "lua",
+                    "markdown",
+                    "markdown_inline",
                     "python",
                     "rust",
                     "sql",
@@ -266,5 +268,10 @@ require("lazy").setup({
                 }
             })
         end
-    }
+    },
+
+    -- markdown render
+    -- {
+    --     "MeanderingProgrammer/render-markdown.nvim",
+    -- }
 })
