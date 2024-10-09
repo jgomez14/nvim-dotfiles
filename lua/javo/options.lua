@@ -38,4 +38,4 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- Set conceal level for obsidian.nvim
-vim.opt.conceallevel = 1
+vim.opt.conceallevel = 0

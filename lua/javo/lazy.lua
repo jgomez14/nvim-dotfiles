@@ -243,6 +243,8 @@ require("lazy").setup({
                 min_chars = 2
             },
 
+            ui = { enable = false },
+
             note_id_func = function (title)
                 local result_title = ""
 
