@@ -1,7 +1,0 @@
-require("javo.options")
-require("javo.lazy")
-require("javo.colors")
-require("javo.lualine")
-require("javo.keymaps")
-require("javo.lsp")
-require("javo.cmp")

@@ -1,1 +1,1 @@
-require("javo")
+require("config")
