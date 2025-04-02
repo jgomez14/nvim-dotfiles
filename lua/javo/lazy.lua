@@ -259,7 +259,7 @@ require("lazy").setup({
 
     -- oil.nvim - Edit your filesystem like every other text file
     {
-        'stevearc/oil.nvim',
+        "stevearc/oil.nvim",
         opts = {},
         -- Optional dependencies
         dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -272,8 +272,9 @@ require("lazy").setup({
         end
     },
 
-    -- markdown render
-    -- {
-    --     "MeanderingProgrammer/render-markdown.nvim",
-    -- }
+    -- zen mode
+    {
+        "folke/zen-mode.nvim",
+        opts = {}
+    }
 })
