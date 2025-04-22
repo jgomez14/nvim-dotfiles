@@ -15,8 +15,8 @@
 --     }
 -- })
 
-require("catppuccin").setup({
-    flavour = "macchiato"
-})
-
-vim.cmd.colorscheme("catppuccin")
+-- require("catppuccin").setup({
+--     flavour = "macchiato"
+-- })
+--
+-- vim.cmd.colorscheme("vague")

@@ -20,8 +20,22 @@ require("lazy").setup({
     {
         "catppuccin/nvim",
         name = "catppuccin",
-        priority = 1000
+        priority = 1000,
+        config = function ()
+            require("catppuccin").setup({
+                flavour = "macchiato"
+            })
+            vim.cmd.colorscheme("catppuccin")
+        end
     },
+
+    -- {
+    --     "vague2k/vague.nvim",
+    --     config = function ()
+    --         require("vague").setup({})
+    --         vim.cmd.colorscheme("vague")
+    --     end
+    -- },
 
     -- Telescope
     {
