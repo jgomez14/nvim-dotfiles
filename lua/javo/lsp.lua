@@ -10,7 +10,7 @@ require("mason-lspconfig").setup({
         "html",
         "helm_ls",
         "jsonls",
-        "tsserver",
+        -- "tsserver",
         "lua_ls",
         "marksman",
         "pyright",
