@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.cmd("filetype plugin indent on")
+vim.cmd.filetype("plugin indent on")
 
 vim.opt.number = true
 vim.opt.relativenumber = true
