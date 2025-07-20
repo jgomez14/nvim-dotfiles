@@ -1,11 +1,10 @@
 local shared = require("config.shared")
-local pickers = require("telescope.builtin")
 
 local keymaps = {
   {
     mode = "n",
-    keystroke = "<Leader>pf",
-    executes = pickers.find_files,
+    keystroke = "<Leader>-",
+    executes = "<CMD>Oil<CR>",
     description = "[p]royect [f]iles"
   }
 }
