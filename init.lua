@@ -1,5 +1,6 @@
 require("config.options")
 require("config.lazy")
 require("config.treesitter")
+require("config.lsp")
 require("config.telescope")
 require("config.oil")
