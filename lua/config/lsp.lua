@@ -1,5 +1,6 @@
 local lsp_servers = {
-  "lua-ls"
+  "lua-ls",
+  "rust-analyzer"
 }
 
 vim.lsp.enable(lsp_servers)
