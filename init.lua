@@ -1,7 +1,7 @@
 require("config.options")
 require("config.lazy")
 require("config.treesitter")
--- require("config.lsp")
+require("config.lsp")
 -- require("config.autocompletion")
 require("config.telescope")
 require("config.oil")
