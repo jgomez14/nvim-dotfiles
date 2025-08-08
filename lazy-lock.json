@@ -1,4 +1,5 @@
 {
+  "blink.pairs": { "branch": "main", "commit": "3cf0b660caf266992d6c62eb1f6049c483b35409" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "mini.icons": { "branch": "main", "commit": "b8f6fa6f5a3fd0c56936252edcd691184e5aac0c" },
   "nvim-treesitter": { "branch": "main", "commit": "9866036ec3c5db40700a9178494e0cfdcfe6ecfd" },
