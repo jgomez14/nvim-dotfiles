@@ -14,12 +14,9 @@ return {
   -- can be found here https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json
   settings = {
     Lua = {
-      runtime = {
-        version = "LuaJIT",
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("", true),
       },
-      diagnostics = {
-        globals = { "vim" }
-      }
     },
   }
 }
