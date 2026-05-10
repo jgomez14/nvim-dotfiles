@@ -13,4 +13,10 @@ vim.opt.expandtab = true
 
 vim.opt.winborder = "rounded"
 
-vim.opt.completeopt = "menuone,popup,noselect,fuzzy"
+vim.opt.completeopt = "menuone,noselect"
+
+vim.filetype.add({
+  extension = {
+    tf = "terraform"
+  }
+})

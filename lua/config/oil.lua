@@ -5,7 +5,7 @@ local keymaps = {
     mode = "n",
     keystroke = "<Leader>-",
     executes = "<CMD>Oil<CR>",
-    description = "[p]royect [f]iles"
+    description = "Open oil"
   }
 }
 

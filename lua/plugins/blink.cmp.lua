@@ -1,4 +1,5 @@
-return {
+local is_enabled = false
+local plugin = {
   "saghen/blink.cmp",
 
   dependencies = {
@@ -32,3 +33,9 @@ return {
     fuzzy = { implementation = "prefer_rust_with_warning" }
   }
 }
+
+if is_enabled then
+  return plugin
+else
+  return {}
+end

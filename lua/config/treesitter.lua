@@ -1,6 +1,7 @@
 local treesitter = require("nvim-treesitter")
 
 local languages = {
+  "c",
   "gitcommit",
   "gitignore",
   "lua",
