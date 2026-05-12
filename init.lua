@@ -76,7 +76,6 @@ vim.opt.completeopt = {
   "menuone",
   -- Very important
   "noselect",
-  "preview"
 }
 
 vim.keymap.set("i", "<Tab>", function ()
