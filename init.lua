@@ -64,7 +64,7 @@ vim.opt.pumborder = "rounded"
 vim.opt.pumheight = 5
 
 vim.opt.complete = {
-  "o",
+  -- "o",
   ".",
   "w",
   "b",
