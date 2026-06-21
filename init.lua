@@ -19,11 +19,25 @@ vim.pack.add({
 
   -- Telescope
   { src = "https://github.com/nvim-lua/plenary.nvim" }, -- Telescope dependency
-  { src = "https://github.com/nvim-telescope/telescope.nvim" }
+  { src = "https://github.com/nvim-telescope/telescope.nvim" },
+
+  -- Oil
+  { src = "https://github.com/stevearc/oil.nvim" },
 })
 
 -- Theme
 vim.cmd.colorscheme("vague")
+
+-- Oil
+require("oil").setup({
+  view_options = {
+    show_hidden = true
+  }
+})
+
+vim.keymap.set("n", "-", function ()
+  vim.cmd("Oil")
+end, { desc = "Open parent directory" })
 
 -- LSP
 vim.lsp.config("lua_ls", {
@@ -64,7 +78,7 @@ vim.opt.pumborder = "rounded"
 vim.opt.pumheight = 5
 
 vim.opt.complete = {
-  -- "o",
+  "o",
   ".",
   "w",
   "b",
@@ -88,7 +102,10 @@ vim.keymap.set("i", "<S-Tab>", function ()
 end, { expr = true })
 
 vim.keymap.set("i", "<Enter>", function ()
-  return vim.fn.pumvisible() == 1 and "<C-y>" or "<Enter>"
+  return (
+    vim.fn.pumvisible() == 1
+    and vim.fn.complete_info().selected >= 0
+  ) and "<C-y>" or "<Enter>"
 end, { expr = true })
 
 -- Filetypes
