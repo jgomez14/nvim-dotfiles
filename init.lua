@@ -5,9 +5,19 @@ vim.g.maplocalleader = " "
 vim.opt.number = true
 vim.opt.relativenumber = true
 
-vim.opt.shiftwidth = 2
+vim.opt.scrolloff = 15 -- Number of lines always visible
+
+-- scrolloffpad is only available in nightly builds
+-- this checks if the option is available before setting
+local ok, _ = pcall(vim.api.nvim_get_option_info2, "scrolloffpad", {})
+if ok then
+  vim.opt.scrolloffpad = 1 -- Allows vertically centering cursor at the end of file
+end
+
+vim.opt.tabstop = 4 -- Size of tab indentation
+vim.opt.shiftwidth = 2 -- Size of spaces indentation
 vim.opt.softtabstop = -1
-vim.opt.expandtab = true
+vim.opt.expandtab = true -- Insert spaces on tab
 
 -- External plugins
 vim.pack.add({
