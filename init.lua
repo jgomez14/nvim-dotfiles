@@ -124,3 +124,10 @@ vim.filetype.add({
     tf = "terraform"
   }
 })
+
+vim.api.nvim_create_autocmd("VimLeavePre", {
+  pattern = {"*.tf"},
+  callback = function ()
+    vim.cmd("!terraform fmt -recursive")
+  end,
+})
