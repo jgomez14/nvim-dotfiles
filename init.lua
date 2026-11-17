@@ -5,7 +5,7 @@ vim.g.maplocalleader = " "
 vim.opt.number = true
 vim.opt.relativenumber = true
 
-vim.opt.scrolloff = 15 -- Number of lines always visible
+vim.opt.scrolloff = 50 -- Number of lines always visible
 
 -- scrolloffpad is only available in nightly builds
 -- this checks if the option is available before setting
